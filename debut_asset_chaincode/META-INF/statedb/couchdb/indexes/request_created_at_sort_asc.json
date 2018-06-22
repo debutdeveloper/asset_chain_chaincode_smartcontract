@@ -1,0 +1,1 @@
+{"index":{"fields":[{"created_at":"asc"}]},"ddoc":"request_created_at_sort_asc", "name":"request_sorting","type":"json"}
