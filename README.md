@@ -97,11 +97,13 @@ peer2.debutinfotech.com
 ca.debutinfotech.com
 ```
 - You will have to add all these domains and ip addresses to your `/etc/hosts` file in all your machines that you need. 
-- You will have to copy the network to the $HOME of other peers and orderers and rename the network folder to `debutNetwork` as it will have dependency.
+- You will have to copy the network to the same location on all the peer and orderer machines that you will be working with.
+- You need to clone and hyperledger fabric and fabric-ca from github into the github.com directory in your $GOPATH and run make command to create the required peer, orderer, ca etc... binaries.
 - To start the peer use the `start_peer.sh` shell script.
 - To start the orderer use the `start_orderer.sh` shell script.
 - Then you will be required to create the channel, join all three peers [peer0.debutinfotech.com, peer1.debutinfotech.com, peer2.debutinfotech.com]() using either of the two orderers [firstorderer.debutinfotech.com, secondorderer.debutinfotech.com]().
 - Then you will be required to install the chaincode on all peers and instantiate the chaincode.
+- Th  two above metioned tasks can be achieved by `script.sh` file.
 - You can also refer to this [blog](https://blockchain-fabric.blogspot.com/2017/09/underconstruction-setting-up-blockchain.html) for reference about the physical setup.
 
 ## 4. Setup Assetchain Api
@@ -132,9 +134,10 @@ https://github.com/debutdeveloper/admin_panel
 1. <b>Admin Panel</b> can be accessed by this url [assetchain.debutinfotech.com](http://assetchain.debutinfotech.com)
  
 2. <b>Mobile app</b> to access AssetChain can be downloaded from the [Google Play store](https://play.google.com/store/apps/details?id=com.flutter.debutassets) and the [Apple App store](https://itunes.apple.com/us/app/id1391618573)
-<!--
+
 <hr>
 
+<!--
 # AssetChain FAQs
 Do you have questions about why something in AssetChain is the way it is? Or how to do something? Check out the [FAQ]().
 <hr>
@@ -150,6 +153,6 @@ If you have any ideas on how to improve the project, please reach out! Specifica
     -Did your knowledge grow by the end of the tutorial?
     -Was something particularly painful?
     -Did it make you have an existential crisis and you -are suddenly unsure of what it means to be, you?
-  
 
 <!-- Use the [GitHub Issues]() section to communicate any improvements/bugs and pain points! -->
+
